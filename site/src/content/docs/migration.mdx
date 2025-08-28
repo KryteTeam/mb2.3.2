@@ -7,24 +7,10 @@ toc: true
 
 ## v6.0.0
 
-### Reboot
+### CSS
 
-- Relocated heading classes (like `.h1`) and some type classes (`.mark` and `.small`) to Reboot from `_type.scss`. This avoids a dependency in Sass modules and we like to avoid extending selectors in general.
-
-### Helpers
-
-- Ratio helpers have been moved to utilities.
-- Dropped clearfix helper for `.d-flow-root` utility.
-
-### Utilities
-
-- Ratio helpers are now powered by the utility API and use simplified values without `calc()`.
-- mdo-do: Need to refactor utilities API if we want to restor the commented out custom ratios.
-- **Display utilities:** added `flow-root` option for a modern clearfix.
-- **Sizing utilities:**
-  - Renamed `.mh-*`/`.mw-*` to `.max-h-*`/`.max-w-*`
-  - Added `.min-h-*` and `.min-w-*` utilities with two default values, `0` and `100%`
-  - Added `auto`, `min-content`, `max-content`, and `fit-content` to `width` and `height` utilities.
+- Implemented CSS layers in `_root.scss` and applied them to all our Sass files.
+  - **mdo-do:** More to implement on this
 
 ### Sass
 
@@ -46,6 +32,25 @@ toc: true
   - Removed unused `$popover-arrow-color` and `$popover-arrow-outer-color`
   - Removed unused `$alert-bg-scale`, `$alert-border-scale`, and `$alert-color-scale` (replaced by theme tokens)
   - Removed unused `$list-group-item-bg-scale` and `$list-group-item-color-scale` (replaced by theme tokens)
+
+### Reboot
+
+- Relocated heading classes (like `.h1`) and some type classes (`.mark` and `.small`) to Reboot from `_type.scss`. This avoids a dependency in Sass modules and we like to avoid extending selectors in general.
+
+### Helpers
+
+- Ratio helpers have been moved to utilities.
+- Dropped clearfix helper for `.d-flow-root` utility.
+
+### Utilities
+
+- Ratio helpers are now powered by the utility API and use simplified values without `calc()`.
+- mdo-do: Need to refactor utilities API if we want to restor the commented out custom ratios.
+- **Display utilities:** added `flow-root` option for a modern clearfix.
+- **Sizing utilities:**
+  - Renamed `.mh-*`/`.mw-*` to `.max-h-*`/`.max-w-*`
+  - Added `.min-h-*` and `.min-w-*` utilities with two default values, `0` and `100%`
+  - Added `auto`, `min-content`, `max-content`, and `fit-content` to `width` and `height` utilities.
 
 ### Docs
 
